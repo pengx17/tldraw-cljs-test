@@ -1,17 +1,16 @@
 (ns playground.index
-  (:require [rum.core :as rum]))
+  (:require [rum.core :as rum]
+            [playground.tldraw.basic :refer [Basic]]))
 
 (defonce app-state (atom {:text "Hello world!"}))
 
-(rum/defc hello-world [data]
-  [:div
-   [:h1 (:text @app-state)]
-   [:h3 "Edit this and watch it change!" " " (:foo data)]])
+(rum/defc root []
+  [:div "123"])
 
 (defn ^:dev/after-load  start []
   ;; start is called by init and after code reloading finishes
   ;; this is controlled by the :after-load in the config
-  (rum/mount (hello-world {:foo "bar"})
+  (rum/mount (root)
              (. js/document (getElementById "app"))))
 
 (defn ^:export init []

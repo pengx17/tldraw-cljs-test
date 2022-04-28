@@ -6,6 +6,8 @@
     "dev": "shadow-cljs watch frontend"
   },
   "dependencies": {
+    "@tldraw/tldraw": "^1.11.0",
+    "mobx": "^6.5.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },
