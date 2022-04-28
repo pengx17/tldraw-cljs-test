@@ -2,10 +2,8 @@
   (:require [rum.core :as rum]
             [playground.tldraw.basic :refer [Basic]]))
 
-(defonce app-state (atom {:text "Hello world!"}))
-
 (rum/defc root []
-  [:div "123"])
+  [:div (Basic)])
 
 (defn ^:dev/after-load  start []
   ;; start is called by init and after code reloading finishes

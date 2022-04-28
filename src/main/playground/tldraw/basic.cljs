@@ -2,4 +2,4 @@
   (:require [playground.rum :as r]
             ["@tldraw/tldraw" :refer [Tldraw]]))
 
-(def Basic (r/adapt-class tldraw/Tldraw))
+(def Basic (r/adapt-class Tldraw))
