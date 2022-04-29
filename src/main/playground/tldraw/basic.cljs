@@ -1,5 +1,5 @@
 (ns playground.tldraw.basic
   (:require [playground.rum :as r]
-            ["@tldraw/tldraw" :refer [Tldraw]]))
+            ["@tldraw/tldraw" :as tldraw]))
 
-(def Basic (r/adapt-class Tldraw))
+(def Tldraw (r/adapt-class tldraw/Tldraw))
